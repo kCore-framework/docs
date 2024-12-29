@@ -3,7 +3,7 @@
 ## Server-Side Implementation
 
 
-### Core Job Structure
+### Core Job Structures
 
 ```lua
 {
