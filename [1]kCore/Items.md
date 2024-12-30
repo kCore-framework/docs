@@ -2,7 +2,7 @@
 
 ## Item Configuration
 
-### Shared Item Structure
+### Shared Item Structure 👋
 Items are defined in `Shared.Items` with the following structure:
 
 ```lua
