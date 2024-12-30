@@ -68,6 +68,9 @@ Like the basic component, but adds an icon with an optional tick at the end of y
     isTicked --[[bool]] = false
 },
 ```
+>Credit to jordanpkl for icon images
+
+![Icon Index Reference](https://i.imgur.com/208Hia0.png)
 
 ### social
 
