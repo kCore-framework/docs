@@ -4,15 +4,15 @@ A FiveM resource for managing head blend palette colors, allowing customization 
 
 ## Installation
 
-1. Download the `kPaletteEdit` resource
+1. Download the kPaletteEdit resource
 2. Place it in your server's resources directory
-3. Add to your `server.cfg`:
+3. Add to your server.cfg:
 ```cfg
 ensure kPaletteEdit
 ```
 ## Configuration
 
-Configure default palette color in `server.cfg`:
+Configure default palette color in server.cfg:
 ```cfg
 # Default color is mint green (3, 252, 194)
 set palette_default_red "3"      # Default: 3
@@ -21,7 +21,7 @@ set palette_default_blue "194"   # Default: 194
 ```
 ## Client Exports
 ### SetHeadBlendPaletteColor
-Set a single palette color:
+Set a single palette color
 
 ```lua
 -- Parameters:
