@@ -2,7 +2,7 @@
 
 ## Item Configuration
 
-### Shared Item Structure 👋
+### Shared Item Structure 
 Items are defined in `Shared.Items` with the following structure:
 
 ```lua
@@ -296,3 +296,6 @@ Weapon Equip -> Metadata Update -> Ammo Sync
 Player Use -> UseItem Event -> Handler Callback -> 
 Item Effect -> Inventory Update -> Client Sync
 ```
+
+
+## Note all documentation right now will probably change as we make changes.
