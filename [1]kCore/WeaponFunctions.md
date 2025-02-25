@@ -1,34 +1,4 @@
-# Complete Items System Documentation
-
-## Item Configuration
-
-### Shared Item Structure 
-Items are defined in `Shared.Items` with the following structure:
-
-```lua
-{
-    itemName = string,      -- Unique identifier
-    label = string,         -- Display name
-    description = string,   -- Item description
-    image = string,         -- Image filename
-    maxStack = number,      -- Maximum stack size
-    unique = boolean,       -- Whether item can stack
-    weight = number,        -- Item weight
-    size = {               -- Grid size
-        width = number,
-        height = number
-    },
-    rarity = string,       -- Item rarity type
-    shouldCloseInventory = boolean,  -- Close inventory on use
-    type = string,         -- 'item' or 'weapon'
-    ammoType = string      -- For weapons only
-}
-```
-
-### Image Assets
-* Location: `kcore/shared/items/itemImages/`
-* Naming convention: Match `image` property in item configuration
-* Supported formats: PNG recommended
+# Complete Weapons System Documentation
 
 ## Weapon System
 
@@ -119,43 +89,6 @@ RegisterNetEvent('kCore:updateWeaponAmmo')
 * Updates current weapon ammo
 * Syncs with inventory
 
-## Regular Items
-
-### Basic Item Configuration
-```lua
-{
-    itemName = 'water',
-    label = 'Water Bottle',
-    description = "A nice water bottle",
-    image = 'waterbottle.png',
-    maxStack = 64,
-    unique = false,
-    weight = 1,
-    size = {
-        width = 1,
-        height = 2
-    },
-    rarity = 'drink',
-    shouldCloseInventory = true,
-    type = 'item'
-}
-```
-
-### Item Handlers
-
-#### CreateUseableItem
-```lua
-exports.kCore:CreateUseableItem(itemName, callback)
-```
-Example:
-```lua
-exports.kCore:CreateUseableItem("water", function(source, item, slot)
-    if exports.kCore:RemoveItem(source, item.name, 1, slot) then
-        TriggerClientEvent('kCore:drink', source, item)
-    end
-end)
-```
-
 ## Advanced Item Features
 
 ### Metadata System
@@ -197,35 +130,6 @@ RegisterNetEvent('kCore:useAmmo', function(ammoData)
 end)
 ```
 
-## Best Practices
-
-### Item Configuration
-1. Image Naming
-```lua
--- Match image property exactly
-image = 'item_name.png'
-```
-
-2. Size Configuration
-```lua
--- Consider inventory grid impact
-size = {
-    width = 1,  -- Minimum size
-    height = 1
-}
-```
-
-3. Stack Settings
-```lua
--- For stackable items
-maxStack = 64,
-unique = false
-
--- For unique items
-maxStack = 1,
-unique = true
-```
-
 ### Implementation Guidelines
 
 1. Weapon Handling
@@ -240,14 +144,6 @@ TriggerEvent('kCore:saveWeaponMetadata', currentWeapon)
 if currentWeapon.ammoType == ammoData.name then
     -- Process ammo usage
 end
-```
-
-3. Metadata Updates
-```lua
--- Safe metadata updates
-local metadata = item.metadata or {}
-metadata.newProperty = value
-exports.kCore:UpdateItemMetadata(source, slot, metadata)
 ```
 
 ## Common Issues and Solutions
