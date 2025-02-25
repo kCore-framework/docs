@@ -2,6 +2,8 @@
 
 This guide demonstrates how to trigger the exported functions from the KCore inventory system.
 
+## Note: All the following exports are **Server Sided**.
+
 ## Item Management
 
 ### CreateUseableItem
