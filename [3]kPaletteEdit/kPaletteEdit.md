@@ -92,7 +92,7 @@ exports['kPaletteEdit']:SetHeadBlendPaletteColors(source, colors)
 
 ### KCore
 ```lua
--- kCore exmaple
+-- kCore example
 RegisterNetEvent('kCore:loadPlayer', function()
     exports['kPaletteEdit']:InitializePaletteColors()
 end)

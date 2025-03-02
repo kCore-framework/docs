@@ -27,7 +27,7 @@ blipInfo = {
 ```
 * setTitle | Main title of the blip shown in the info below the image/dui
 * setType | There are 3 available types that change an icon in the top right corner: 0 - no icon, 1 - Rockstar Verified icon, 2 - Rockstar Created icon
-* setTexture | This is used to either specify a texture dictionary including a texture name from a .ytd file (streamed or basegame), OR you can use a DUI to load an immage or a gif from the internet.
+* setTexture | This is used to either specify a texture dictionary including a texture name from a .ytd file (streamed or basegame), OR you can use a DUI to load an image or a gif from the internet.
     * dict | The texture dictionary, the name of the .ytd file, without the file extension
     * name | Name of .dds file within that dictionary, again without the extension
     * url | The link to the DUI site you want to load
@@ -74,7 +74,7 @@ Like the basic component, but adds an icon with an optional tick at the end of y
 
 ### social
 
-Rockstar Social Club style, could be used to show the creator for example. Optionally shows a rockstar icon next to the name and a crew tag like in GTA online
+Rockstar Social Club style, could be used to show the creator for example. Optionally shows a Rockstar icon next to the name and a crew tag like in GTA online
 
 ```lua
 {

@@ -41,8 +41,8 @@ shortRange --[[bool]] = false,
 label --[[string]] = "Mountain Drift Circuit",
 ```
 * position | Location of the blip as Vector3.
-* blipId | The ID of the blip chooses what sprite is shown on the minimap. All valid IDs can be found in the [fivem documentation](https://docs.fivem.net/docs/game-references/blips/).
-* blipColor | The GTA Blip color code for the color you wish to use. This is NOT an RGB or hex value. The available color IDs can be found in the [fivem documentation](https://docs.fivem.net/docs/game-references/blips/#blip-colors).
+* blipId | The ID of the blip chooses what sprite is shown on the minimap. All valid IDs can be found in the [Fivem documentation](https://docs.fivem.net/docs/game-references/blips/).
+* blipColor | The GTA Blip color code for the color you wish to use. This is NOT an RGB or hex value. The available color IDs can be found in the [Fivem documentation](https://docs.fivem.net/docs/game-references/blips/#blip-colors).
 * displayType | This changes how the blip is visible, for example only on the pause menu map and not on the minimap. All the display types are [documented](https://docs.fivem.net/natives/?_0x9029B2F3DA924928).
 * scale | Simply the size of the blip on the minimap, 1.0 is the normal scale. Keep in mind, this has to be a float.
 * shortRange | If you set this boolean to true, the blip is only visible on the minimap when you are close to it. Otherwise the blip is always displayed and sticks to the borders of your minimap, even when far away.
