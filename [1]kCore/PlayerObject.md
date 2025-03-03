@@ -185,7 +185,7 @@ This function is used to save the players current data. Should in most cases be 
 <br>
 Triggers the `kCore:updateData` Client Event after saving.
 <br>
-No export available.
+[Export available](./Exports.md#saveplayerdata)
 
 ```lua
 local Player = exports['kCore']:GetPlayer(source)

@@ -76,6 +76,50 @@ Refer to the [Inventory Documentation](./InventoryExports.md#additem)
 
 Refer to the [Inventory Documentation](./InventoryExports.md#getvehicleinventory)
 
+### RemoveItem
+
+Refer to the [Inventory Documentation](./InventoryExports.md#removeitem)
+
+### UpdateItemMetadata
+
+Refer to the [Inventory Documentation](./InventoryExports.md#updateitemmetadata)
+
+### CreateGroundInventory
+
+Refer to the [Inventory Documentation](./InventoryExports.md#creategroundinventory)
+
+### GetInventoryById
+
+Refer to the [Inventory Documentation](./InventoryExports.md#getinventorybyid)
+
+### MoveInventoryItem
+
+Refer to the [Inventory Documentation](./InventoryExports.md#moveinventoryitem)
+
+### SplitInventoryItem
+
+Refer to the [Inventory Documentation](./InventoryExports.md#splitinventoryitem)
+
+### SaveVehicleInventory
+
+Refer to the [Inventory Documentation](./InventoryExports.md#savevehicleinventory)
+
+### LoadVehicleInventory
+
+Refer to the [Inventory Documentation](./InventoryExports.md#loadvehicleinventory)
+
+### AddInvetoryViewer
+
+Refer to the [Inventory Documentation](./InventoryExports.md#addinventoryviewer)
+
+### RemoveInventoryViewer
+
+Refer to the [Inventory Documentation](./InventoryExports.md#removeinventoryviewer)
+
+### GetInventoryViewers
+
+Refer to the [Inventory Documentation](./InventoryExports.md#getinventoryviewers)
+
 ### CreateJob
 
 Refer to the [Jobs Documentation](./Jobs.md)
@@ -160,6 +204,38 @@ Gets the entire player object for a specific source. Refer to the [Player Object
 
 ```lua
 local Player = exports['kCore']:GetPlayer(source)
+```
+
+### GetPlayerByCitizenId
+
+Gets the entire player object for a specific player by their citizenid. Refer to the [Player Object Documentation](./PlayerObject.md) for details.
+
+```lua
+local Player = exports['kCore']:GetPlayerByCitizenId(citizenid)
+```
+
+### GetPlayers
+
+Gets all players with their full player object. That's a lot of data so only use this if really necessary. efer to the [Player Object Documentation](./PlayerObject.md) for details.
+
+```lua
+local Players = exports['kCore']:GetPlayers()
+```
+
+### SavePlayerData
+
+Saves the players data, should in most cases be done automatically by the core without issues. Same as calling the [Player.Functions.Save function](./PlayerObject.md#save)
+
+```lua
+local success = exports['kCore']:SavePlayerData(source)
+```
+
+### UpdatePlayerAppearance
+
+This function updates the players saved Appearance, but doesn't apply it. Useless until kClothing release. Accepts a table as argument with the same structure as returned in [Player.Appearance](./PlayerObject.md#appearance), but has fallbacks in case anything is not included. Returns false if the player was not found by provided source. Otherwise same as [Player.Functions.UpdateAppearance](./PlayerObject.md#updateappearance)
+
+```lua
+local success = exports['kCore']:UpdatePlayerAppearance(source, data)
 ```
 
 ### SelectCharacter
