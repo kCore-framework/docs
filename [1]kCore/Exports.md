@@ -238,6 +238,14 @@ This function updates the players saved Appearance, but doesn't apply it. Useles
 local success = exports['kCore']:UpdatePlayerAppearance(source, data)
 ```
 
+### IsPlayerInitialized
+
+Simply returns wether or not the core has loaded data for the provided source yet. Returns true or false.
+
+```lua
+local isInitialized = exports['kCore']:IsPlayerInitialized(source)
+```
+
 ### SelectCharacter
 
 Selects a character for a player. Expects a currently unused id, a slot, the source and a currently unused callback function.
