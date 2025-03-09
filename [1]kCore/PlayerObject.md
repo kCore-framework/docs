@@ -195,7 +195,7 @@ Player.Functions.Save()
 
 ### UpdateMoney
 
-This function sets the players money to the passed amount. Should not be used anymore, as it includes no checks whatsoever. Refer to the [Economy Documentation](./Economy.md). Triggers a [save](#save). Does not return anything.
+This function sets the players money to the passed amount. Should not be used anymore, as it includes no checks whatsoever. Refer to the [Economy Documentation](./Economy.md). Returns true or false for success or failed.
 <br>
 Exports listed in the Economy documentation.
 
@@ -204,7 +204,10 @@ local Player = exports['kCore']:GetPlayer(source)
 
 local moneyType = "cash"
 local amount = 100
-Player.UpdateMoney(moneyType, amount) -- sets the players cash to 100
+local success = Player.UpdateMoney(moneyType, amount) -- sets the players cash to 100
+if not success then
+    print('Failed to update money!')
+end
 ```
 
 ### UpdateJob

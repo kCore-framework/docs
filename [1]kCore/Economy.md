@@ -49,7 +49,7 @@ Changing the players money is all handled through these exports.
 
 ### AddMoney
 
-This export adds money to a player. Expected arguments are the source as integer, the amount as number and the money type as string. Returns wether or not the operation succeeded as bool. It can fail if the provided arguments are incomplete or the player is not online. Triggers a [player save](./PlayerObject.md#save)
+This export adds money to a player. Expected arguments are the source as integer, the amount as number and the money type as string. Returns wether or not the operation succeeded as bool. It can fail if the provided arguments are incomplete or the player is not online.
 
 ```lua
 local success = exports['kCore']:AddMoney(source, 100, "bank")
@@ -60,7 +60,7 @@ end
 
 ### RemoveMoney
 
-This export adds money to a player. Expected arguments are the source as integer, the amount as number and the money type as string. Returns wether or not the operation succeeded as bool. It can fail if the provided arguments are incomplete, the player is not online or the player does not have enough money. Triggers a [player save](./PlayerObject.md#save)
+This export adds money to a player. Expected arguments are the source as integer, the amount as number and the money type as string. Returns wether or not the operation succeeded as bool. It can fail if the provided arguments are incomplete, the player is not online or the player does not have enough money.
 
 ```lua
 local success = exports['kCore']:RemoveMoney(source, 100, "bank")
