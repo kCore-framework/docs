@@ -198,6 +198,22 @@ exports['kCore']:CreateCharacter(citizenid, slot, source, function(success, citi
 end)
 ```
 
+### DeleteCharacter
+
+Delete a character by citizenid or source. If you provide citizenid, that will be used to identify the char that is supposed to be deleted. If you only provide source, the currently selected character by that player will be deleted. You can provide a callback function that will receive a true/false for success or fail of deleting the char as argument. If the deletion failed, you'll also get an error message as string, that will also be printed in the console.
+
+```lua
+local player = exports['kCore']:GetPlayer(source)
+
+exports['kCore']:DeleteCharacter(player.citizenid, nil, function(success, err) -- keep in mind that you only need either cid or source, other one can be nil
+    if not success then
+        print('Deletion failed: ' .. err)
+    else
+        print('Deletion successful')
+    end
+end)
+```
+
 ### GetPlayer
 
 Gets the entire player object for a specific source. Refer to the [Player Object Documentation](./PlayerObject.md) for details.
